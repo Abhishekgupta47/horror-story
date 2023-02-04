@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scary-stories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Scary-Stories</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <!-- parallax scrolling effect -->
+        <h2>A Hounted Night in a forest </h2>
+        <p>
+            Once upon a time, there was a young couple who decided to take a romantic camping trip in the forest. As they were setting up their tent, they heard strange noises coming from deep within the woods. Despite their fears, they brushed it off as animals and continued with their setup.
+
+However, as the night progressed, the noises became louder and more persistent, causing the couple to become increasingly frightened. Suddenly, they heard the sound of twigs snapping and footsteps approaching their campsite. The couple cowered in their tent, too scared to move.
+<br>
+
+Just as they thought they were about to be attacked, a bright light shone through the trees and a voice called out, "Hello there, are you lost?" It was a park ranger, who had been searching for them after they failed to check in. He explained that the noises they heard were likely just the sounds of animals, and he escorted them back to his ranger station where they spent the night in safety.
+<br>
+
+The couple never forgot the terrifying experience they had in the forest, and they made sure to always let someone know their whereabouts before going on any future camping trips.
+        </p>
+        <h2>A Hounted House</h2>
+        <p>
+            Once upon a time, there was a small town that was known for its creepy old mansion on the outskirts. The mansion was rumored to be haunted and many people claimed to have seen ghostly apparitions and heard eerie noises coming from within its walls. Despite the rumors, a family of four moved into the house, not knowing the truth about its haunted past.
+            <br>
+
+One night, the youngest child woke up to the sound of footsteps coming from the hallway. When she looked out of her bedroom door, she saw a ghostly figure floating down the hall. She screamed and woke up her parents who then called the police. However, by the time the police arrived, the ghostly figure had disappeared. <br>
+
+The family soon realized that the mansion was indeed haunted by the ghost of a former owner who had died under mysterious circumstances. The ghost seemed to be angry and would cause objects to move on their own and make strange noises at night. <br>
+
+Desperate to get rid of the ghost, the family sought help from a local paranormal investigator. The investigator conducted a thorough investigation and discovered that the ghost was upset because he felt that his death had gone unsolved. He was determined to find justice and was not going to rest until his killer was brought to light. <br>
+
+With the help of the paranormal investigator, the family was able to solve the mystery of the ghost's death and bring closure to the spirit. The ghost was finally able to rest in peace, and the family was able to live in the mansion without any further disturbances.
+<br>
+From that day on, the mansion was no longer considered haunted, and the townspeople no longer whispered about its creepy past. The family lived happily in the mansion, grateful for the help they received and for being able to solve the mystery of the haunted house.
+
+
+
+
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front= document.getElementById('mountains_front');
+        let header =document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+          let value=window.scrollY;
+          stars.style.left=value*0.25+'px';  
+          moon.style.top=value*1.05+'px'; 
+          mountains_behind.style.top=value*0.5+'px';
+          mountains_front.style.top=value*0+'px';
+          text.style.marginRight=value *4 + 'px';
+          text.style.marginTop = value*1.5+'px';
+          btn.style.marginTop = value*1.5+'px';
+          header.style.top=value*0.5+'px';
+        })
+    </script>
+</body>
+</html>
